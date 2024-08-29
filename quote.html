@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="quote.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hidden { display: none; } /* Ensure .hidden class hides elements */
+    </style>
+</head>
+<body class="light-mode">
+    <div class="container">
+        <h1>Quote Generator</h1>
+        <div class="controls">
+            <button id="favorites">Favorites</button>
+            <button id="feedback">Feedback</button>
+            <button id="scramble">Scramble Game</button>
+        </div>
+        <div class="quote-box" id="quote-box">
+            <p id="quote"></p>
+            <p id="author"></p>
+            <button id="favorite-btn">❤️</button>
+        </div>
+        <div class="buttons">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div class="type-select">
+            <label for="quote-type">Select Quote Type:</label>
+            <select id="quote-type">
+                <option value="direct">Direct</option>
+                <option value="indirect">Indirect</option>
+                <option value="inspirational">Inspirational</option>
+                <option value="famous">Famous</option>
+                <option value="cinematic">Cinematic</option>
+                <option value="literary">Literary</option>
+                <option value="philosophical">Philosophical</option>
+                <option value="humorous">Humorous</option>
+                <option value="historical">Historical</option>
+                <option value="religious">Religious</option>
+            </select>
+        </div>
+        <div id="favorites-section" class="hidden">
+            <h2>Favorite Quotes</h2>
+            <ul id="favorites-list"></ul>
+        </div>
+        <div id="feedback-section" class="hidden">
+            <h2>Feedback</h2>
+            <textarea id="feedback-text" placeholder="Leave your feedback here..."></textarea>
+            <button id="submit-feedback">Submit</button>
+            <p id="feedback-message" class="hidden">Thank you for your feedback!</p>
+        </div>
+        <div id="scramble-section" class="hidden">
+            <h2>Scramble Game</h2>
+            <p id="scrambled-quote"></p>
+            <input type="text" id="scramble-input" placeholder="Rearrange the words...">
+            <button id="submit-scramble">Submit</button>
+            <p id="scramble-result"></p>
+            <p id="timer">Time left: 60s</p>
+            <button id="hint-btn">Get a Hint</button>
+            <p id="hint-message"></p>
+        </div>
+        
+        <footer>
+            <p>Designed by Mrunal Gaikwad <i class="fa fa-heart"></i></p>
+        </footer>
+    </div>
+    <audio id="button-sound" src="button-click.mp3"></audio>
+    <script src="quote.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
